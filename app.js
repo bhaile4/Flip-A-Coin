@@ -35,19 +35,19 @@ flipBtn.on("click", ()=>{
         console.log(userChoice.toLowerCase())
         //console.log(userInput.val())
 
-        if (userChoice.toLowerCase() === 'heads'&& heads == 3){
+        if (userChoice.toLowerCase() === 'heads'&& heads == 5){
           h3.text('You Win!')
           h3.show()
         }
-         if(userChoice.toLowerCase() ==='tails'&& tails == 3){
+         if(userChoice.toLowerCase() ==='tails'&& tails == 5){
           h3.text('You Win!')
           h3.show()
         }
-     if (userChoice.toLowerCase() === 'heads'&& tails == 3){
+     if (userChoice.toLowerCase() === 'heads'&& tails == 5){
           h3.text('You lose!')
           h3.show()
    }
-    if(userChoice.toLowerCase() ==='tails'&& heads == 3){
+    if(userChoice.toLowerCase() ==='tails'&& heads == 5){
       h3.text('You lose!')
       h3.show()
    }
