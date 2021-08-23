@@ -5,6 +5,8 @@ The game will keep track of how many times the coin flips against the user's cho
 The number of flips they need to make is already set to x amount of tries. If the 
 user's choice is met with in the limmited tries the user wins if not they lose. 
 
+[Flip A Coin - Demo](https://bhaile4.github.io/Flip-A-Coin/)
+
 ## Getting Started
 ​You can clone this repo and run it in your local machine for development and testing purposes.
 ​
