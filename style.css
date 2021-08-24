@@ -41,7 +41,7 @@
       width: 400px;
       padding: 50px;
       position: absolute;
-      /* transform: translate (-50%, -50%); */
+      transform: translate (-50%, -50%); 
       top: 30%;
       left: 40%;
       box-shadow: 15px 30px 35px rgba(197, 112, 112, 0.1);
@@ -63,13 +63,13 @@
   }
   .coin{
       border-color: transparent;
-      /* border: 1px solid black; */
+      border: 1px solid black; 
       height: 150px;
       width: 150px;
       position: relative;
       margin: 50px auto;
-      /* -webkit-transform-style:preserve-3d; */
-      /* transform-style: preserve-3d; */
+      -webkit-transform-style:preserve-3d; 
+      transform-style: preserve-3d;
       animation: spin-tails 3s ;
   }
   .coin img{
