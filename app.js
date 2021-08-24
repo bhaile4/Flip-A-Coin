@@ -1,4 +1,5 @@
-console.log("working")
+//console.log("working")
+
 let heads = 0;
 let tails = 0;
 let coin = document.querySelector(".coin");
@@ -71,7 +72,7 @@ flipBtn.on("click", () => {
   if (i % 2 === 0) {
     // HEADS
     setTimeout(() => {
-      //    coin.animate("spin-heads 3s forwards")
+      // animation that flips the coin 
       coin.style.animation = "spin-heads 3s forwards"
 
     }, 100);
