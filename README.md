@@ -8,24 +8,26 @@ user's choice is met with in the limmited tries the user wins if not they lose.
 [Flip A Coin - Demo](https://bhaile4.github.io/Flip-A-Coin/)
 
 ## Getting Started
-​You can clone this repo and run it in your local machine for development and testing purposes.
+You can clone this repo and run it in your local machine for development and testing purposes.
 ​
 ### Prerequisites
-​
 What things you need to install the software and how to install them
-​
 ```
 IDE of your prefernce.
 Nodejs.
 You can use live server to run on your local server.
 ```
+### Future Goals
+Add Error handling
+make it more interactive by adding background music when the coin flips. 
+Also, add more animaitn when they win instead of just "You Win" statement 
+add a confetti or something.
+
 ## Authors
 
-​
 * **Bilen Haile** - *Initial work* - [Flip A Coin](https://github.com/bhaile4/Flip-A-Coin)
 ​
 ## License
-​
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 ​
 ## Acknowledgments
