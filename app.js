@@ -36,12 +36,12 @@ flipBtn.on("click", () => {
     // If user picks heads and accumulates 5 points user wins
 
     if (userChoice.toLowerCase() === 'heads' && heads == 5) {
-      h3.text('You Win!')
+      h3.text('You Win!!!')
       h3.show()
     }
     // If user picks tails and accumulates 5 points user wins
     if (userChoice.toLowerCase() === 'tails' && tails == 5) {
-      h3.text('You Win!')
+      h3.text('You Win!!!')
       h3.show()
     }
     // If user picks tails instead of heads user loses. 
