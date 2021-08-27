@@ -14,7 +14,7 @@ let h2 = $('h2')
 h2.hide()
 let h3 = $('h3')
 h3.hide()
-
+let winScore = 2
 //add event listner to the play button
 
 playBtn.on('click', event => {
@@ -32,27 +32,34 @@ flipBtn.on("click", () => {
     $("#heads-count").text(`HEADS: ${heads}`);
     $("#tails-count").text(`TAILS: ${tails}`);
     //console.log(userChoice.toLowerCase())
-
+    const disableFlip = ()=>{
+      flipBtn.prop("disabled",true)
+  
+    }
     // If user picks heads and accumulates 5 points user wins
 
-    if (userChoice.toLowerCase() === 'heads' && heads == 5) {
+    if (userChoice.toLowerCase() === 'heads' && heads == winScore) {
       h3.text('You Win!!!')
       h3.show()
+    disableFlip()
     }
     // If user picks tails and accumulates 5 points user wins
-    if (userChoice.toLowerCase() === 'tails' && tails == 5) {
+    if (userChoice.toLowerCase() === 'tails' && tails == winScore) {
       h3.text('You Win!!!')
       h3.show()
+      disableFlip()
     }
     // If user picks tails instead of heads user loses. 
-    if (userChoice.toLowerCase() === 'heads' && tails == 5) {
+    if (userChoice.toLowerCase() === 'heads' && tails == winScore) {
       h3.text('You lose!')
       h3.show()
+      disableFlip()
     }
     // If user picks heads instead of tails user loses. 
-    if (userChoice.toLowerCase() === 'tails' && heads == 5) {
+    if (userChoice.toLowerCase() === 'tails' && heads == winScore) {
       h3.text('You lose!')
       h3.show()
+      disableFlip()
     }
   };
   // disable flip button for 3ms
@@ -62,7 +69,7 @@ flipBtn.on("click", () => {
       flipBtn.disabled = false;
     }, 3000);
   };
-
+  
   //* ====================================== Main
   // gets random number
   let i = Math.floor(Math.random() * 2);
@@ -76,7 +83,8 @@ flipBtn.on("click", () => {
       coin.style.animation = "spin-heads 3s forwards"
 
     }, 100);
-    heads++;// updates head points
+    winScore !== heads ? heads++ : disableFlip(); 
+    // updates head points
     coin.style.animation = "none"
   } else {
     // TAILS
@@ -86,7 +94,7 @@ flipBtn.on("click", () => {
       coin.style.animation = "spin-tails 3s forwards"
 
     }, 100);
-    tails++;
+    winScore !== tails ? tails++ : disableFlip(); 
     coin.style.animation = "none"
   };
 
@@ -96,9 +104,22 @@ flipBtn.on("click", () => {
 
   // Reset button event listener
   resetBtn.on("click", () => {
+    // window.location.reload()
     coin.animate = "none";
     heads = 0;
     tails = 0;
     updateStats();
+    resetInput();
   })
+  const resetInput =()=>{
+    h2.hide()
+    h3.hide()
+    userInput.show()
+    playBtn.show()
+    flipBtn.prop("disabled",false)
+    userInput.val("")
+    
+    // h2.show()
+  }
 });
+
